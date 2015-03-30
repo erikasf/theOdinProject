@@ -1,0 +1,47 @@
+//1
+
+var ans = [];
+var sum = 0;
+
+for (var i = 1; i < 1000; i++) {
+    if (i % 3 === 0 || i % 5 === 0) {
+        ans.push(i);
+        sum += i;
+    }
+}
+
+console.log(sum);
+
+//2       
+
+function fib() {
+  var x, y, total;
+  for (var i = 0; i < 4000000; i++) {
+    if (i === 0) {
+      x = 1;
+      y = 2;
+    }
+
+    while( x % 2 === 0) {
+      total = x + y;
+      x = y;
+      y = total;
+    }
+
+    return(total);
+  }
+};
+//3
+function largestPrimeFactor(number) {
+var i = 2;
+while (i <= number) {
+    if (number % i == 0) {
+        number /= i;    
+    } else {
+        i++;
+    }
+}
+console.log(i);
+}
+var a = 600851475143 ; 
+largestPrimeFactor(a)
